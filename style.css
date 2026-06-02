@@ -1,0 +1,81 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 20px;
+}
+
+.question {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+    /* Đáp án */
+    .question label {
+        display: block;
+        margin: 10px 0;
+        padding: 14px 18px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all .25s ease;
+        background: #fafafa;
+    }
+
+        /* Hover */
+        .question label:hover {
+            border-color: #4a90e2;
+            background: #eef5ff;
+            transform: translateX(3px);
+        }
+
+    /* Ẩn radio mặc định */
+    .question input[type="radio"] {
+        display: none;
+    }
+
+    /* Đáp án được chọn */
+    .question label:has(input[type="radio"]:checked) {
+        background: #4a90e2;
+        border-color: #4a90e2;
+        color: white;
+        font-weight: bold;
+    }
+
+/* Đáp án đúng */
+.correct-answer {
+    background: #d4edda !important;
+    border-color: #28a745 !important;
+    color: #155724 !important;
+}
+
+/* Đáp án sai */
+.wrong-answer {
+    background: #f8d7da !important;
+    border-color: #dc3545 !important;
+    color: #721c24 !important;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+    button:hover {
+        background: #357abd;
+    }
+
+#finalResult {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
